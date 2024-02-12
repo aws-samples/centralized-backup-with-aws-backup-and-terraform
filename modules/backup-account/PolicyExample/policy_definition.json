@@ -1,0 +1,45 @@
+{
+    "plans": {
+        "BackupPlan00": {
+            "regions": {
+                "@@assign": [
+                    "eu-central-1"
+                ]
+            },
+            "rules": {
+                "BackupRule00": {
+                    "target_backup_vault_name": {
+                        "@@assign": "Default"
+                    }
+                }
+            },
+            "backup_plan_tags": {
+                "backup-plan-tag": {
+                    "tag_key": {
+                        "@@assign": "backup-plan-tag"
+                    },
+                    "tag_value": {
+                        "@@assign": "backup-plan-key"
+                    }
+                }
+            },
+            "selections": {
+                "tags": {
+                    "ResourceAssignment00": {
+                        "iam_role_arn": {
+                            "@@assign": "arn:aws:iam::$account:role/BackupOperatorRole"
+                        },
+                        "tag_key": {
+                            "@@assign": "terraform-backup-enabled"
+                        },
+                        "tag_value": {
+                            "@@assign": [
+                                "true"
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
