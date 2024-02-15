@@ -45,7 +45,7 @@ The _Central Backup account_ should be [registered as a delegated administrator]
 
 The policy management process involves creating a `.zip` archive containing two JSON files, then uploading it to your designated S3 bucket, created during the [deploy resources](#deploy-resources) stage. These two files are: a backup policy, and a list of target OUs/accounts.
 
-1. The `modules/backup-account/PolicyExample/policy_definition.json` is a backup policy that is formatted using the syntax described in the [AWS Backup documentation](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_backup_syntax.htm). Review or adjust this file to your requirements.
+1. The `modules/backup-account/PolicyExample/policy_definition.json` is a backup policy that is formatted using the syntax described in the [AWS Backup documentation](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_backup_syntax.html). Review or adjust this file to your requirements.
 
 2. The `modules/backup-account/PolicyExample/target_list.json` file contains a list of targets, which can be a combination of OU IDs and account IDs. In this example it will contain the single _Member account_ we have prepared earlier. Edit the file with the `target_account_id`.
 
