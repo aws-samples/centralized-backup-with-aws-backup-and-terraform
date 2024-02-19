@@ -19,7 +19,7 @@ variable "restore_operator_role_name" {
 variable "tags" {
   description = "Tags that should be applied to reosurces"
   type        = map(string)
-  default     = {
+  default = {
     backup-terraform = "enabled"
   }
 }
@@ -37,7 +37,7 @@ variable "key_deletion_window_in_days" {
 }
 
 variable "local_key_alias" {
-    description = "The display name of the KMS key. The name must start with the word \"alias\" followed by a forward slash (alias/)."
-    type        = string
-    default     = "alias/TFLocalVaultKey"
+  description = "The display name of the KMS key. The name must start with the word \"alias\" followed by a forward slash (alias/)."
+  type        = string
+  default     = "alias/TFLocalVaultKey"
 }
