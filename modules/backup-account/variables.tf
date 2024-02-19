@@ -150,8 +150,8 @@ variable "target_list_file_name" {
 
 variable "backup_policy_description" {
   description = "The description that should be given to an uploaded backup policy"
-  type       = string
-  default    = "Policy created by Terraform Backup Centralization"
+  type        = string
+  default     = "Policy created by Terraform Backup Centralization"
 }
 
 variable "log_retention_days" {
@@ -169,15 +169,15 @@ variable "sqs_queue_name" {
 variable "tags" {
   description = "Tags that should be applied to reosurces"
   type        = map(string)
-  default     = {
+  default = {
     backup-terraform = "enabled"
   }
 }
 
 variable "central_key_alias" {
-    description = "The display name of the KMS key. The name must start with the word \"alias\" followed by a forward slash (alias/)."
-    type        = string
-    default     = "alias/TFCentralVaultKey"
+  description = "The display name of the KMS key. The name must start with the word \"alias\" followed by a forward slash (alias/)."
+  type        = string
+  default     = "alias/TFCentralVaultKey"
 }
 
 variable "notification_topic_name" {
